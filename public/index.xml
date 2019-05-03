@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Datum, I&#39;m Adam</title>
+    <link>/</link>
+    <description>Recent content in Home on Datum, I&#39;m Adam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hi There</title>
+      <link>/about/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>My name’s Adam Garcia. My training and work have primarily been in public health research, with a focus on biostatistics and epidemiology, but I also dabble in data science and web development. I’m currently looking for work&amp;mdash;ideally applying my skillset and background at an organization similarly invested in those passions. I&amp;rsquo;m passionate about public health equity and social justice, and I&amp;rsquo;m eager to find ways we can thoughtfully collect data and leverage their insights to achieve a more healthy, just, and equal society.</description>
+    </item>
+    
+  </channel>
+</rss>

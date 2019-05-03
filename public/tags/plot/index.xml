@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plot on Datum, I&#39;m Adam</title>
+    <link>/tags/plot/</link>
+    <description>Recent content in Plot on Datum, I&#39;m Adam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test Document 2</title>
+      <link>/blog/2019/05/02/test-document-2/</link>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019/05/02/test-document-2/</guid>
+      <description>Hello world</description>
+    </item>
+    
+    <item>
+      <title>Test Document</title>
+      <link>/blog/2019/05/01/test-document/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019/05/01/test-document/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) #&amp;gt; speed dist #&amp;gt; Min. : 4.0 Min. : 2.00 #&amp;gt; 1st Qu.:12.0 1st Qu.: 26.00 #&amp;gt; Median :15.0 Median : 36.00 #&amp;gt; Mean :15.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+baseurl = "/"
+title = "Datum, I'm Adam"
+author = "Adam Garcia"
+canonifyurls = true
+languagecode = "en"
+paginate = 3
+theme = "hugo-renga"
+
+enableEmoji = true
+hasCJKLanguage = true
+
+# disqusShortname = "your-disqus-shortname"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[params]
+pagetitle = "Datum, I'm Adam"
+copyright = "Adam Garcia"
+faviconfile = "image/favicon.png"
+avatarfile = "img/adam-lake-square.png"
+logofile = "image/normal-hex.png"
+posts_navigation = false
+uselatex = true
+highlightjs = true
+progressively = false
+
+github = "adam-garcia"
+twitter = "adam__garcia"
+linkedin = "adam-garcia-76877ab0"
+email = "hi@adam-garcia.net"
+
+custom_css = ["custom.css", "logo-fix.css", "breadcrumb.css"]
+
+[[menu.primary]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+weight = 2
+
+[[menu.primary]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 3
+
+[permalinks]
+  blog = "/blog/:year/:month/:day/:slug/"
+
+[taxonomies]
+  series = "series"
+  tags = "tags"

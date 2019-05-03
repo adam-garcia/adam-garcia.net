@@ -1,0 +1,16 @@
+/* Center header and blurb */
+
+/* Horizontally */
+h2,
+div.markdown p:first-child {
+    text-align: center;
+}
+/* Vertically (ish) */
+h2 {
+  padding-top: calc(50vh - 150px);
+}
+
+/* Remove blurb border */
+.content .markdown blockquote {
+    border-left: none;
+}
