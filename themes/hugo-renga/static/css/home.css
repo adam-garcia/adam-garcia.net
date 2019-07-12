@@ -10,6 +10,11 @@ h2 {
   padding-top: calc(50vh - 150px);
 }
 
+/* Site title style */
+h2 del {
+    color: #bbbbbb;
+}
+
 /* Remove blurb border */
 .content .markdown blockquote {
     border-left: none;

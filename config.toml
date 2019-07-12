@@ -29,7 +29,7 @@ twitter = "adam__garcia"
 linkedin = "adam-garcia-76877ab0"
 email = "hi@adam-garcia.net"
 
-custom_css = ["custom.css", "logo-fix.css", "breadcrumb.css"]
+custom_css = ["custom.css", "site.css", "breadcrumb.css"]
 
 [[menu.primary]]
 identifier = "blog"

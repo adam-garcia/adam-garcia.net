@@ -6,12 +6,8 @@ body {
 }
 
 .nav .container {
-    /*border: 1px dashed #e5e5e5;*/
-    /*border-bottom: 0.1rem solid #007bff;*/
-    background: rgb(245, 247, 249);
     -webkit-box-shadow: 0 0.25rem 0.15rem -0.15rem #e5e5e5;
     box-shadow: 0 0.25rem 0.15rem -0.15rem #e5e5e5;
-    /*background: linear-gradient(270deg, #ffffff, #007bff);*/
 }
 
 
