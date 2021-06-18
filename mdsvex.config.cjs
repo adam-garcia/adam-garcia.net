@@ -19,6 +19,6 @@ module.exports = {
 	layout: {
 		blog: "./src/lib/mdsvex/$blogLayout.svelte",
 		work: "./src/lib/mdsvex/$workLayout.svelte",
-		_: "./src/routes/$layout.svelte"
+		_: "./src/routes/__layout.svelte"
 	}
 };
