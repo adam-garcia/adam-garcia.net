@@ -51,7 +51,7 @@
 			Thanks for stopping by&mdash;feel free to stick around if you want to
 			check out my <a href="/blog">blog</a> or read a bit more
 			<a href="/about">about me</a>, the links are all here and in the navbar
-			up top.
+			up top. My GitHub handle is <a href="https://github.com/adam-garcia" target="blank">adam-garcia</a>.
 		</p>
 	</div>
 	<h1>Recent blog posts</h1>
