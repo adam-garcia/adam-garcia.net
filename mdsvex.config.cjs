@@ -4,21 +4,28 @@ module.exports = {
 		dashes: "oldschool",
 	},
 	remarkPlugins: [
-		[require("remark-github"), {
+		[import("remark-github"), {
 			// Use your own repository
 			repository: "https://github.com/svelte-add/mdsvex.git",
 		}],
-		require("remark-abbr"),
+		import("remark-abbr"),
 	],
 	rehypePlugins: [
-		require("rehype-slug"),
-		[require("rehype-autolink-headings"), {
+		import("rehype-slug"),
+		[import("rehype-autolink-headings"), {
 			behavior: "wrap",
 		}],
 	],
 	layout: {
-		blog: "./src/lib/mdsvex/$blogLayout.svelte",
-		work: "./src/lib/mdsvex/$workLayout.svelte",
-		_: "./src/routes/__layout.svelte"
+		blog: "src/lib/mdsvex/blog.svelte",
+		_: "src/lib/mdsvex/_.svelte"
 	}
 };
+
+
+// Error [ERR_REQUIRE_ESM]: require() of
+// ES Module /Users/adam/code/svelte-4/node_modules/remark-github/index.js
+// from /Users/adam/code/svelte-4/mdsvex.config.cjs not supported.
+// Instead change the require of
+// index.js in /Users/adam/code/svelte-4/mdsvex.config.cjs
+// to a dynamic import() which is available in all CommonJS modules.

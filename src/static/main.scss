@@ -1,5 +1,5 @@
-@import "./global.scss";
-@import "./layout.scss";
+@use "global.scss";
+@use "layout.scss";
 
 // @import "./prism-themes/vsc-dark-plus.css";
 @import "./prism-themes/nord.css";

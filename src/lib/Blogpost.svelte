@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
 	export let post;
 	export let showDate = true;
-	let underline = (event) => {
+	let underline = (event: Event) => {
 		event.target.querySelector('h2.post-title span').style.textDecoration = 'underline #333';
 		event.target.querySelector('h2.post-title small').style.color = '#333';
 	};
-	let removeUnderline = (event) => {
+	let removeUnderline = (event: Event) => {
 		event.target.querySelector('h2.post-title span').style.textDecoration = 'underline #ffffff00';
 		event.target.querySelector('h2.post-title small').style.color = '#666';
 	};
 </script>
 
 <li class="listed-post" on:mouseenter={underline} on:mouseleave={removeUnderline}>
-	<a sveltekit:prefetch href={post.slug}>
+	<a data-sveltekit-preload-data="hover" href={post.slug}>
 		<div>
 			<h2 class="post-title">
 				<span>{post.title}</span>

@@ -1,21 +1,7 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const res = await fetch('/api/blog');
-
-		if (res.ok) {
-			return { props: { posts: await res.json() } };
-		}
-		return {
-			status: res.status,
-			error: new Error()
-		};
-	}
-</script>
-
-<script>
-	import Blogpost from '$lib/Blogpost.svelte';
-	export let posts;
-	let heHim;
+<script lang="ts">
+	import type { PageProps } from './$types';
+	let { data }: PageProps = $props();
+	let heHim = $state();
 </script>
 
 <svelte:head>
@@ -26,41 +12,33 @@
 	<div>
 		<h1 id="it-me">
 			Hi there, <br class="visible-mobile" /> I'm
+			<!-- svelte-ignore a11y_no_static_element_interactions -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<span
 				id="adam"
-				on:mouseenter={() => {
-					heHim = !heHim;
-				}}
-				on:mouseleave={() => {
-					heHim = !heHim;
-				}}
-				class:show_pronouns={heHim}
-			>
+				onmouseenter={() => heHim = !heHim}
+				onmouseleave={() => heHim = !heHim}
+				class={[heHim ? "show_pronouns" : '']}>
 				Adam
 			</span>
 		</h1>
 
 		<p class="intro">
 			I'm a
-			<span class="role"> researcher</span>
-			<span class="role"> data scientist </span>
+			<span class="role"> data engineer</span>
 			<span class="role"> web developer </span>
+			<span class="role"> generative artist </span>
 			based in Brooklyn, NY.
+		</p>
+		<p>
+			I relish in designing and implementing efficient, observable, well-documented data processing systems, and <strong>I am open to NYC or remote roles in this problem space</strong>.
 		</p>
 		<p>
 			Thanks for stopping by&mdash;feel free to stick around if you want to
 			check out my <a href="/blog">blog</a> or read a bit more
-			<a href="/about">about me</a>, the links are all here and in the navbar
-			up top. My GitHub handle is <a href="https://github.com/adam-garcia" target="blank">adam-garcia</a>.
+			<a href="/about">about me</a>. My GitHub handle is <a href="https://github.com/adam-garcia" target="blank">adam-garcia</a>.
 		</p>
 	</div>
-	<h1>Recent blog posts</h1>
-	<ul class="blog_posts">
-		{#each posts as post}
-			<Blogpost {post} />
-		{/each}
-	</ul>
-	<ul />
 </div>
 
 <style>
@@ -114,9 +92,5 @@
 		br.visible-mobile {
 			display: none;
 		}
-	}
-	ul.blog_posts {
-		padding-left: 0;
-		list-style: none;
 	}
 </style>

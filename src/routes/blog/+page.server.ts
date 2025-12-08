@@ -1,21 +1,15 @@
-import * as dayjs from "dayjs";
+import type { PageServerLoad } from "./$types";
 
-const allPosts = import.meta.glob('/src/routes/blog/*/*/*.svx');
-
-export async function get() {
+export const load: PageServerLoad = async ({ params }) => {
+  const allPosts = import.meta.glob('/src/routes/*/*/*/*/*.svx');
 
   const posts = Object.entries(allPosts)
-    .map(async ([path, frontmatter]) => {
-      // Pull slug from internal path
-      const ext = path.split(/\./).pop();
+    .map(async ([path, frontmatter]: [string, () => Promise<unknown>]) => {
       const slug = path
         .replace(/^\/src\/routes/, '')
-        .replace(ext, '')
-        .replace(/\.$/, '');
+        .replace(/\/\+page\.(svx|svelte)/, '')
       const fm = await frontmatter();
-      // Extract named metadata in yaml frontmatter
       let { title, date, description } = fm.metadata;
-      // Ok so dayjs isn't working? Native JS date format it is...
       date = new Date(date);
       const dateOptions = {
         year: 'numeric',
@@ -29,9 +23,7 @@ export async function get() {
   // Await all before returning
   return Promise.all(posts).then((res) => {
     return {
-      body: res.sort((a, b) => b.date - a.date)
+      posts: res.sort((a, b) => b.date - a.date)
     }
   })
-}
-
-
+};
